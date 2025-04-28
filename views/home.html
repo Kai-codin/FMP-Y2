@@ -1,0 +1,37 @@
+<section class='glow1'>
+    <h1>Hive Mind</h1>
+    <p>In a city where every light, every camera, every mind is connected. Freedom is a forgotten concept. They see all,
+        control all and punish disobedience without mercy. But in the shadows a rogue signal flickers. You. The last
+        survivor. The final anomaly. Will you give the power back to the people or will you fall in line?</p>
+</section>
+<section class='glow2'>
+    <h2>Screenshots</h2>
+    <div class="image-grid" id="image-grid"></div>
+</section>
+<div id="img-modal"
+    style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+    <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;"
+        onclick="closeModal()">&times;</span>
+    <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
+</div>
+<script>
+    function openModal(src) {
+        const modal = document.getElementById('img-modal');
+        const modalImg = document.getElementById('modal-img');
+        modalImg.src = src;
+        modal.style.display = 'flex';
+        document.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+    function closeModal() {
+        document.getElementById('img-modal').style.display = 'none';
+        document.removeEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+</script>

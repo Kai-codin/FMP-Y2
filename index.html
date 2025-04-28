@@ -5,67 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to the homepage">
     <title>Homepage</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/CSS/styles.css"> 
+    <link rel="stylesheet" href="/CSS/glow.css"> 
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/research">Research</a></li>
-                <li><a href="/planning">Planning</a></li>
-                <li><a href="/game">Game</a></li>
-                <li><a href="/testing">Testing</a></li>
-                <li><a href="/evaluation">Evaluation</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class='glow1'>
-            <h1>Hive Mind</h1>
-            <p>In a city where every light, every camera, every mind is connected. Freedom is a forgotten concept. They see all, control all and punish disobedience without mercy. But in the shadows a rogue signal flickers. You. The last survivor. The final anomaly. Will you give the power back to the people or will you fall in line?</p>
-        </section>
-
-        <section id="about" class='glow2'>
-            <h2>Screenshots</h2>
-            <div class="image-grid" id="image-grid"></div>
-            <script>
-                fetch('images.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const grid = document.getElementById('image-grid');
-                        data.images.forEach((img, index) => {
-                            const image = document.createElement('img');
-                            image.src = img.src;
-                            image.alt = img.alt || `Game Screenshot ${index + 1}`;
-                            image.style.cursor = 'pointer';
-                            image.onclick = () => openModal(img.src);
-                            grid.appendChild(image);
-                        });
-                    })
-                    .catch(err => console.error('Error loading images:', err));
-            </script>
-        </section>
-        <div id="img-modal" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-            <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;" onclick="closeModal()">&times;</span>
-            <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
-        </div>
-        <script>
-            function openModal(src) {
-                const modal = document.getElementById('img-modal');
-                const modalImg = document.getElementById('modal-img');
-                modalImg.src = src;
-                modal.style.display = 'flex';
-            }
-            function closeModal() {
-                document.getElementById('img-modal').style.display = 'none';
-            }
-        </script>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Nova Spectra Games. All rights reserved.</p>
-    </footer>
+<header>
+    <h1>Final Magier Project Year 2</h1>
+    <nav>
+        <ul>
+            <li><button id="home-link" onclick="loadContent('/views/home.html')">Home</button></li>
+            <li><button id="research-link" onclick="loadContent('/views/research.html')">Research</button></li>
+            <li><button id="planning-link" onclick="loadContent('/views/planning.html')">Planning</button></li>
+            <li><button id="game-link" onclick="loadContent('/views/game.html')">Game</button></li>
+            <li><button id="testing-link" onclick="loadContent('/views/testing.html')">Testing</button></li>
+            <li><button id="evaluation-link" onclick="loadContent('/views/evaluation.html')">Evaluation</button></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="content">
+        <!-- Your index page content here -->
+    </div>
+</main>
+<script src="/JS/layout.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadContent('/views/home.html');
+    });
+</script>
+<footer>
+    <p>&copy; 2025 Nova Spectra Games. All rights reserved.</p>
+</footer>
 </body>
 </html>

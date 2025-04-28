@@ -1,0 +1,35 @@
+.glow1 {
+    box-shadow: 
+    0 0 15px rgb(254, 107, 217),
+    0 0 20px rgb(254, 107, 217),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.glow2 {
+    box-shadow: 
+    0 0 15px rgb(254, 107, 107),
+    0 0 20px rgb(254, 107, 107),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.glow3 {
+    box-shadow: 
+    0 0 15px rgb(107, 188, 254),
+    0 0 20px rgb(107, 188, 254),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.glow4 {
+    box-shadow: 
+    0 0 15px rgb(203, 254, 107),
+    0 0 20px rgb(203, 254, 107),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.glow5 {
+    box-shadow: 
+    0 0 15px rgb(225, 107, 254),
+    0 0 20px rgb(225, 107, 254),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+

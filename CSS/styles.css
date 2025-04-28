@@ -17,6 +17,7 @@ header {
     display: inline-block;
     padding-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 
 header::after {
@@ -36,10 +37,11 @@ header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
-    text-align: left;
+    text-align: center;
 }
 
 header nav ul li::before {
@@ -53,14 +55,34 @@ header nav ul li:first-child::before {
     font-weight: 700;
 }
 
-header nav ul li a {
+button {
+    border: none;
+    cursor: pointer;
+}
+
+header nav ul li button {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    background-color: #222;
+    padding: 0.5em 1em;
+    border-radius: 5px;
 }
 
-header nav ul li a:hover {
+header nav ul li button:hover {
     text-decoration: underline;
+    background-color: #444;
+}
+
+header nav ul li .active {
+    border: 1px solid #999;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 /* Section Styles */
@@ -75,27 +97,6 @@ section {
     padding: 1rem;
     background: #333;
     border-radius: 5px;
-}
-
-.glow1 {
-    box-shadow: 
-    0 0 15px rgb(254, 107, 217),
-    0 0 20px rgb(254, 107, 217),
-    0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.glow2 {
-    box-shadow: 
-    0 0 15px rgb(254, 107, 107),
-    0 0 20px rgb(254, 107, 107),
-    0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.glow3 {
-    box-shadow: 
-    0 0 15px rgb(107, 188, 254),
-    0 0 20px rgb(107, 188, 254),
-    0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 section h1, section h2 {
@@ -147,11 +148,42 @@ footer {
 }
 
 .image-grid img{
-    width: calc(50% - .25em);
+    width: calc(50% - .25em - 7.5px);
+    margin: 2px 5px;
     height: 250px;
     object-fit: cover;
 }
 
 .image-grid img:hover{
-    scale: 1.05;
+    scale: 1.025;
+}
+
+.section{
+    border-bottom: 2px solid #222;
+    border-radius: 0;
+    margin: 0;
+}
+
+.section p {
+    margin-top: -1em;
+    margin-left: 1em;
+}
+
+
+@media (max-width: 750px) {
+    .image-grid img{
+        width: calc(100% - .25em - 7.5px);
+        margin: 2px 5px;
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 500px) {
+    .image-grid img{
+        width: calc(100% - .25em - 7.5px);
+        margin: 2px 5px;
+        height: 150px;
+        object-fit: cover;
+    }
 }
