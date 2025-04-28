@@ -29,22 +29,39 @@
 
         <section id="about" class='glow2'>
             <h2>Screenshots</h2>
-            <div class="image-grid">
-                <img src="img/Screenshot 2025-03-31 134011 - Copy.png" alt="Game Screenshot 1">
-                <img src="img/Screenshot 2025-03-31 142644 - Copy.png" alt="Game Screenshot 2">
-                <img src="img/Screenshot 2025-04-02 121228 - Copy.png" alt="Game Screenshot 3">
-                <img src="img/Screenshot 2025-04-02 121240 - Copy.png" alt="Game Screenshot 4">
-            </div>
+            <div class="image-grid" id="image-grid"></div>
+            <script>
+                fetch('images.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const grid = document.getElementById('image-grid');
+                        data.images.forEach((img, index) => {
+                            const image = document.createElement('img');
+                            image.src = img.src;
+                            image.alt = img.alt || `Game Screenshot ${index + 1}`;
+                            image.style.cursor = 'pointer';
+                            image.onclick = () => openModal(img.src);
+                            grid.appendChild(image);
+                        });
+                    })
+                    .catch(err => console.error('Error loading images:', err));
+            </script>
         </section>
-
-        <section id="services" class='glow3'>
-            <h2>Our Services</h2>
-            <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-            </ul>
-        </section>
+        <div id="img-modal" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+            <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
+        </div>
+        <script>
+            function openModal(src) {
+                const modal = document.getElementById('img-modal');
+                const modalImg = document.getElementById('modal-img');
+                modalImg.src = src;
+                modal.style.display = 'flex';
+            }
+            function closeModal() {
+                document.getElementById('img-modal').style.display = 'none';
+            }
+        </script>
     </main>
 
     <footer>

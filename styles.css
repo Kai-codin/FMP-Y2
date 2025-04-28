@@ -66,6 +66,8 @@ header nav ul li a:hover {
 /* Section Styles */
 main {
     padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 section {
