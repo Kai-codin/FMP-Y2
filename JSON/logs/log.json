@@ -1,0 +1,22 @@
+{
+    "logs": [
+        {
+            "date": "2025-04-30",
+            "time": "12:00:00",
+            "type": "practical",
+            "details": "Today I worked on the AI for my game.\nIt now locks onto the player and glows red when they detect the player.\nI also added a new enemy type that shoots projectiles at the player.",
+            "image": [
+                {
+                    "src": "img/Screenshot 2025-03-31 134011 - Copy.png",
+                    "alt": "Lots of ai",
+                    "description": "Lots of ai"
+                },
+                {
+                    "src": "img/Screenshot 2025-04-02 121228 - Copy.png",
+                    "alt": "AI glowing red",
+                    "description": "AI glowing red"
+                }
+            ]
+        }
+    ]
+}

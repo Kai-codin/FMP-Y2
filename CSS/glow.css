@@ -33,3 +33,38 @@
     0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.research {
+    box-shadow: 
+    0 0 15px rgb(254, 107, 107),
+    0 0 20px rgb(254, 107, 107),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.planning {
+    box-shadow: 
+    0 0 15px rgb(254, 203, 107),
+    0 0 20px rgb(254, 203, 107),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.practical {
+    box-shadow: 
+    0 0 15px rgb(252, 254, 107),
+    0 0 20px rgb(252, 254, 107),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.testing {
+    box-shadow: 
+    0 0 15px rgb(161, 254, 107),
+    0 0 20px rgb(161, 254, 107),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.evaluation {
+    box-shadow: 
+    0 0 15px rgb(107, 254, 254),
+    0 0 20px rgb(107, 254, 254),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+}
+

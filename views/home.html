@@ -14,24 +14,3 @@
         onclick="closeModal()">&times;</span>
     <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
 </div>
-<script>
-    function openModal(src) {
-        const modal = document.getElementById('img-modal');
-        const modalImg = document.getElementById('modal-img');
-        modalImg.src = src;
-        modal.style.display = 'flex';
-        document.addEventListener('click', function (e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-    }
-    function closeModal() {
-        document.getElementById('img-modal').style.display = 'none';
-        document.removeEventListener('click', function (e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-    }
-</script>
