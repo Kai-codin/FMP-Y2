@@ -96,20 +96,32 @@ function loadImages() {
         .catch(err => console.error('Error loading images:', err));
 };
 
+function setActiveButton(button) {
+    const buttons = document.querySelectorAll('.filter-buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('filter', button.textContent.toLowerCase());
+    window.history.pushState({}, '', currentUrl.toString());
+}
+
 function loadLogs() {
+    const currentUrl = new URL(window.location.href);
+    const filter = currentUrl.searchParams.get('filter') || 'all'; // Check for filter in URL
+
     fetch('/JSON/logs/log.json')
         .then(response => response.json())
         .then(data => {
             const logsContainer = document.getElementById('logs-container');
             logsContainer.innerHTML = `
                 <div class="filter-buttons">
-                    <button onclick="filterLogs('all', this)">All</button>
-                    <button onclick="filterLogs('research', this)">Research</button>
-                    <button onclick="filterLogs('planning', this)">Planning</button>
-                    <button onclick="filterLogs('practical', this)">Practical</button>
-                    <button onclick="filterLogs('game', this)">Game</button>
-                    <button onclick="filterLogs('testing', this)">Testing</button>
-                    <button onclick="filterLogs('evaluation', this)">Evaluation</button>
+                    <button onclick="filterLogs('all'); setActiveButton(this)">All</button>
+                    <button onclick="filterLogs('research'); setActiveButton(this)">Research</button>
+                    <button onclick="filterLogs('planning'); setActiveButton(this)">Planning</button>
+                    <button onclick="filterLogs('practical'); setActiveButton(this)">Practical</button>
+                    <button onclick="filterLogs('game'); setActiveButton(this)">Game</button>
+                    <button onclick="filterLogs('testing'); setActiveButton(this)">Testing</button>
+                    <button onclick="filterLogs('evaluation'); setActiveButton(this)">Evaluation</button>
                 </div>
                 <div id="logs-content"></div>
             `;
@@ -134,6 +146,7 @@ function loadLogs() {
                 `;
                 logsContent.appendChild(logEntry);
             });
+            filterLogs(filter); // Apply the filter from the URL
         })
         .catch(err => console.error('Error loading logs:', err));
 }
