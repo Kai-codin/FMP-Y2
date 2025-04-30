@@ -1,8 +1,24 @@
 {
     "logs": [
         {
-            "date": "2025-04-30",
-            "time": "12:00:00",
+            "date": "2025-03-28",
+            "type": "practical",
+            "details": "Today I started to block out the main level of my game. I did this by addeding basic walls and a floor and lighting with a dence fog.",
+            "image": [
+                {
+                    "src": "img/Screenshot 2025-03-31 114808.png",
+                    "alt": "image of a road before fog",
+                    "description": "image of a road before fog"
+                },
+                {
+                    "src": "img/Screenshot 2025-03-31 114840.png",
+                    "alt": "image of a road after fog",
+                    "description": "image of a road after fog"
+                }
+            ]
+        },
+        {
+            "date": "2025-03-31",
             "type": "practical",
             "details": "Today I worked on the AI for my game.\nIt now locks onto the player and glows red when they detect the player.\nI also added a new enemy type that shoots projectiles at the player.",
             "image": [

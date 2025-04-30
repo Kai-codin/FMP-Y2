@@ -188,6 +188,28 @@ footer {
     padding: .5em 1em;
 }
 
+.filter-buttons {
+    margin-bottom: 2em;
+}
+
+.filter-buttons button {
+    background: #444;
+    color: white;
+    padding: .5em 1em;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background: #555;
+}
+
+.filter-buttons button.active {
+    background: #6bfefbff;
+    color: #222;
+}
+
 @media (max-width: 750px) {
     .dropdown-content {
         display: none;

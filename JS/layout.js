@@ -101,11 +101,24 @@ function loadLogs() {
         .then(response => response.json())
         .then(data => {
             const logsContainer = document.getElementById('logs-container');
+            logsContainer.innerHTML = `
+                <div class="filter-buttons">
+                    <button onclick="filterLogs('all', this)">All</button>
+                    <button onclick="filterLogs('research', this)">Research</button>
+                    <button onclick="filterLogs('planning', this)">Planning</button>
+                    <button onclick="filterLogs('practical', this)">Practical</button>
+                    <button onclick="filterLogs('game', this)">Game</button>
+                    <button onclick="filterLogs('testing', this)">Testing</button>
+                    <button onclick="filterLogs('evaluation', this)">Evaluation</button>
+                </div>
+                <div id="logs-content"></div>
+            `;
+            const logsContent = document.getElementById('logs-content');
             data.logs.forEach(log => {
                 const logEntry = document.createElement('section');
                 logEntry.classList.add(`${log.type}`);
                 logEntry.innerHTML = `
-                    <h2>${log.date} ${log.time}</h2>
+                    <h2>${log.date}</h2>
                     <p><strong>Type:</strong> ${log.type.charAt(0).toUpperCase() + log.type.slice(1)}</p>
                     <p><strong>Details:</strong> ${log.details.replace(/\n/g, '<br>')}</p>
                     <div class="image-grid" id="image-grid">
@@ -119,10 +132,21 @@ function loadLogs() {
                         <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
                     </div>
                 `;
-                logsContainer.appendChild(logEntry);
+                logsContent.appendChild(logEntry);
             });
         })
         .catch(err => console.error('Error loading logs:', err));
+}
+
+function filterLogs(type) {
+    const logEntries = document.querySelectorAll('#logs-content section');
+    logEntries.forEach(entry => {
+        if (type === 'all' || entry.classList.contains(type)) {
+            entry.style.display = 'block';
+        } else {
+            entry.style.display = 'none';
+        }
+    });
 }
 
 function openModal(src) {
