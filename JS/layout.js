@@ -41,27 +41,28 @@ function setupNavigation() {
 
 function setActiveLink(path) {
 
-    document.querySelectorAll('.active').forEach(link => {
-        link.classList.remove('active');
+    document.querySelectorAll('.active-link').forEach(link => {
+        link.classList.remove('active-link');
     });
 
     if (path.includes('home')) {
-        document.getElementById('home-link')?.classList.add('active');
+        document.getElementById('home-link')?.classList.add('active-link');
         loadImages();
     } else if (path.includes('research')) {
-        document.getElementById('research-link')?.classList.add('active');
+        document.getElementById('research-link')?.classList.add('active-link');
     } else if (path.includes('planning')) {
-        document.getElementById('planning-link')?.classList.add('active');
+        document.getElementById('planning-link')?.classList.add('active-link');
     } else if (path.includes('game')) {
-        document.getElementById('game-link')?.classList.add('active');
+        document.getElementById('game-link')?.classList.add('active-link');
     } else if (path.includes('testing')) {
-        document.getElementById('testing-link')?.classList.add('active');
+        document.getElementById('testing-link')?.classList.add('active-link');
     } else if (path.includes('evaluation')) {
-        document.getElementById('evaluation-link')?.classList.add('active');
+        document.getElementById('evaluation-link')?.classList.add('active-link');
     } else if (path.includes('log')) {
-        document.getElementById('log-link')?.classList.add('active');
+        document.getElementById('log-link')?.classList.add('active-link');
         loadLogs();
     }
+        
 }
 
 function loadContent(path) {
@@ -133,6 +134,8 @@ function loadLogs() {
                     <h2>${log.date}</h2>
                     <p><strong>Type:</strong> ${log.type.charAt(0).toUpperCase() + log.type.slice(1)}</p>
                     <p><strong>Details:</strong> ${log.details.replace(/\n/g, '<br>')}</p>
+                    <p><strong>WWW:</strong> ${log.www.replace(/\n/g, '<br>')}</p>
+                    <p><strong>EBI:</strong> ${log.ebi.replace(/\n/g, '<br>')}</p>
                     <div class="image-grid" id="image-grid">
                         ${log.image.map(
                             img => `<img src="${img.src}" alt="${img.alt}" title="${img.description}" style="cursor: pointer;" onclick="openModal('${img.src}')">`).join('')}

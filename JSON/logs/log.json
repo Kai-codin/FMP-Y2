@@ -1,36 +1,241 @@
 {
     "logs": [
         {
-            "date": "2025-03-28",
+            "date": "2025-03-24",
             "type": "practical",
-            "details": "Today I started to block out the main level of my game. I did this by addeding basic walls and a floor and lighting with a dence fog.",
+            "details": "Today I worked on some of the basic models for my game such as the traffic lights and the road. I also made the code for the traffic lights to work. To add to the feel of the game I made all the lights perfectly in sync with each other.",
+            "www": "I get some of the important assets ready for my game and strated to implemnent them",
+            "ebi": "I had more of the world blocked out",
             "image": [
                 {
-                    "src": "img/Screenshot 2025-03-31 114808.png",
+                    "src": "img/traffic light.png",
+                    "alt": "immage of the traffic light model",
+                    "description": "image of the traffic light model"
+                }
+            ]
+        },
+        {
+            "date": "2025-03-26",
+            "type": "research",
+            "details": "Today I started to make a list of the things i wanted to research for my game such as zombie ants",
+            "www": "I got my list of inishal research ready",
+            "ebi": "I was able to actully do some research duing lesson",
+            "image": [
+                {
+                    "src": "img/research list.png",
+                    "alt": "image of the research list",
+                    "description": "image of the research list"
+                }
+            ]
+        },
+        {
+            "date": "2025-03-27",
+            "type": "research",
+            "details": "Today I started to research and started to write it up",
+            "www": "Got some of the research done",
+            "ebi": "I was able to get more writen up",
+            "image": [
+                
+            ]
+        },
+        {
+            "date": "2025-03-31",
+            "type": "practical",
+            "details": "Today I started to block out the main level of my game. I did this by addeding basic walls and a floor and lighting with a dence fog.",
+            "www": "I started to block out the main level of my game and got the fog to a point that i like",
+            "ebi": "I had more levels blocked out",
+            "image": [
+                {
+                    "src": "img/blocked out no fog.png",
                     "alt": "image of a road before fog",
                     "description": "image of a road before fog"
                 },
                 {
-                    "src": "img/Screenshot 2025-03-31 114840.png",
+                    "src": "img/blocked out fog.png",
                     "alt": "image of a road after fog",
                     "description": "image of a road after fog"
                 }
             ]
         },
         {
-            "date": "2025-03-31",
+            "date": "2025-04-02",
             "type": "practical",
-            "details": "Today I worked on the AI for my game.\nIt now locks onto the player and glows red when they detect the player.\nI also added a new enemy type that shoots projectiles at the player.",
+            "details": "Today I worked on the AI for my game.\nIt now locks onto the player and glows red when they detect the player.\nI also added the code for the ai to shoots projectiles at the player.",
+            "www": "I added the AI to my game and got them walking around",
+            "ebi": "They didnt say red when the player was not detected",
             "image": [
                 {
-                    "src": "img/Screenshot 2025-03-31 134011 - Copy.png",
+                    "src": "img/lots of ai.png",
                     "alt": "Lots of ai",
                     "description": "Lots of ai"
                 },
                 {
-                    "src": "img/Screenshot 2025-04-02 121228 - Copy.png",
+                    "src": "img/angery ai.png",
                     "alt": "AI glowing red",
                     "description": "AI glowing red"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-03",
+            "type": "planning",
+            "details": "Had a meeting with my team mate to plan out the rest of the game and petential ideas for the game.",
+            "www": "I got some good references for the zombie ants",
+            "ebi": "I was able to actully do some research duing lesson",
+            "image": [
+                
+            ]
+        },
+        {
+            "date": "2025-04-07",
+            "type": "research",
+            "details": "Today I started to research the zombie ants and found some good references for them",
+            "www": "I got some good references for the zombie ants",
+            "ebi": "I was able to actully do some research duing lesson",
+            "image": [
+                
+            ]
+        },
+        {
+            "date": "2025-04-07",
+            "type": "testing",
+            "details": "Today I did my first testing session ",
+            "www": "I got some good feed back on my game and some areas to improve",
+            "ebi": "I had more of a game to show",
+            "image": [
+                {
+                    "src": "img/testing 1.png",
+                    "alt": "image of the testing results",
+                    "description": "image of the testing results"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-09",
+            "type": "research",
+            "details": "I continued to research the zombie ants and started to look at the game the last of us",
+            "www": "I finished of my research on the zombie ants",
+            "ebi": "I did more research on the last of us",
+            "image": [
+                
+            ]
+        },
+        {
+            "date": "2025-04-10",
+            "type": "planning",
+            "details": "Today I had another meeting with my team mate to plan out the map for the game and started to scetch it out in illustrator I them started to block out the inside of the main tower.",
+            "www": "Got a good idea for the main map",
+            "ebi": "",
+            "image": [
+                {
+                    "src": "img/map screen shot.png",
+                    "alt": "image of the map scetch",
+                    "description": "image of the map scetch"
+                },
+                {
+                    "src": "img/tower inside.png",
+                    "alt": "image of the tower inside",
+                    "description": "image of the tower inside"
+                },
+                {
+                    "src": "img/tower outside.png",
+                    "alt": "image of the tower outside",
+                    "description": "image of the tower outside"
+                }
+            ]
+        },
+        {
+            "date": "2025-04-28",
+            "type": "practical",
+            "details": "I fixed the bug where the ai dodn't walk aroud on the iside of the tower.",
+            "www": "Fixed the bug",
+            "ebi": "I had been able to get more of the details in",
+            "image": [
+                {
+                    "src": "img/fixed ai.png",
+                    "alt": "image of the ai inside",
+                    "description": "image of the ai inside"
+                }
+            ]
+        },
+        {
+            "date": "2025-05-01",
+            "type": "research",
+            "details": "Today I put to gether me form to gather primary research for my game.",
+            "www": "Put together my form",
+            "ebi": "I had had some more responces due lesson time allowing me to start to plot my research in google sheets",
+            "image": [
+                {
+                    "src": "img/form.png",
+                    "alt": "image of the form",
+                    "description": "image of the form"
+                }
+            ]
+        },
+        {
+            "date": "2025-05-05",
+            "type": "practical",
+            "details": "I've started to write up the research from the form i put out",
+            "www": "I now have some good research for my game",
+            "ebi": "I had got some more responces",
+            "image": [
+                {
+                    "src": "img/form results.png",
+                    "alt": "image of the form responces",
+                    "description": "image of the form responces"
+                },
+                {
+                    "src": "img/form results 2.png",
+                    "alt": "image of the form responces",
+                    "description": "image of the form responces"
+                },
+                {
+                    "src": "img/form results 3.png",
+                    "alt": "image of the form responces",
+                    "description": "image of the form responces"
+                }
+            ]
+        },
+        {
+            "date": "2025-05-07",
+            "type": "practical",
+            "details": "Started work on the sewer grates, I also started work on the sewer system and leading the player throught it",
+            "www": "Started to work on the sewer grates",
+            "ebi": "I had time to do more work on the sewers",
+            "image": [
+                {
+                    "src": "img/sewer grate block out.png",
+                    "alt": "image of the sewer grate",
+                    "description": "image of the sewer grate"
+                },
+                {
+                    "src": "img/sewer grate code.png",
+                    "alt": "image of the sewer grate code",
+                    "description": "image of the sewer grate code"
+                },
+                {
+                    "src": "img/sewuer.png",
+                    "alt": "image of the sewer system",
+                    "description": "image of the sewer system"
+                },
+                {
+                    "src": "img/sewer inside.png",
+                    "alt": "image of the sewer system inside",
+                    "description": "image of the sewer system inside"
+                }
+            ]
+        },
+        {
+            "date": "2025-05-12",
+            "type": "testing",
+            "details": "Today I did my second testing session ",
+            "www": "I got some good feed back on my game and some areas to improve",
+            "ebi": "I had more of a game to show",
+            "image": [
+                {
+                    "src": "img/feadback.png",
+                    "alt": "image of the sewer grate",
+                    "description": "image of the sewer grate"
                 }
             ]
         }

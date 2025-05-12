@@ -76,7 +76,7 @@ button {
     background-color: #444;
 }
 
-.dropdown-item .active {
+.active-link {
     border: 1px solid #999;
 }
 
