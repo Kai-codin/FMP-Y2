@@ -140,12 +140,6 @@ function loadLogs() {
                         ${log.image.map(
                             img => `<img src="${img.src}" alt="${img.alt}" title="${img.description}" style="cursor: pointer;" onclick="openModal('${img.src}')">`).join('')}
                     </div>
-                    <div id="img-modal"
-                        style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
-                        <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;"
-                            onclick="closeModal()">&times;</span>
-                        <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
-                    </div>
                 `;
                 logsContent.appendChild(logEntry);
             });

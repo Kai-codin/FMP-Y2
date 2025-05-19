@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to the homepage">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/CSS/styles.css"> 
-    <link rel="stylesheet" href="/CSS/glow.css"> 
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/glow.css">
 </head>
+
 <body>
-<header>
-    <h1>Final Major Project Year 2</h1>
-    <nav>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
-            <script>
-                function toggleDropdown() {
-                    const dropdownContent = document.querySelector('.dropdown-content');
-                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-                    const dropbtn = document.querySelector('.dropbtn');
-                    dropbtn.style.marginTop = dropdownContent.style.display === 'block' ? '-2.35em' : '0em';
-                }
-            </script>
-            <div class="dropdown-content">
-                <span><button class="dropdown-item" id="home-link" onclick="loadContent('/views/home.html')">Home</button></span>
-                <span><button class="dropdown-item" id="research-link" onclick="loadContent('/views/research.html')">Research</button></span>
-                <span><button class="dropdown-item" id="planning-link" onclick="loadContent('/views/planning.html')">Planning</button></span>
-                <span><button class="dropdown-item" id="game-link" onclick="loadContent('/views/game.html')">Game</button></span>
-                <span><button class="dropdown-item" id="testing-link" onclick="loadContent('/views/testing.html')">Testing</button></span>
-                <span><button class="dropdown-item" id="evaluation-link" onclick="loadContent('/views/evaluation.html')">Evaluation</button></span>
-                <span><button class="dropdown-item" id="log-link" onclick="loadContent('/views/log.html')">Reflective Log</button></span>
+    <header>
+        <h1>Final Major Project Year 2</h1>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">Menu</button>
+                <script>
+                    function toggleDropdown() {
+                        const dropdownContent = document.querySelector('.dropdown-content');
+                        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+                        const dropbtn = document.querySelector('.dropbtn');
+                        dropbtn.style.marginTop = dropdownContent.style.display === 'block' ? '-2.35em' : '0em';
+                    }
+                </script>
+                <div class="dropdown-content">
+                    <span><button class="dropdown-item" id="home-link"
+                            onclick="loadContent('/views/home.html')">Home</button></span>
+                    <span><button class="dropdown-item" id="research-link"
+                            onclick="loadContent('/views/research.html')">Research</button></span>
+                    <span><button class="dropdown-item" id="planning-link"
+                            onclick="loadContent('/views/planning.html')">Planning</button></span>
+                    <span><button class="dropdown-item" id="game-link"
+                            onclick="loadContent('/views/game.html')">Game</button></span>
+                    <span><button class="dropdown-item" id="testing-link"
+                            onclick="loadContent('/views/testing.html')">Testing</button></span>
+                    <span><button class="dropdown-item" id="evaluation-link"
+                            onclick="loadContent('/views/evaluation.html')">Evaluation</button></span>
+                    <span><button class="dropdown-item" id="log-link"
+                            onclick="loadContent('/views/log.html')">Reflective Log</button></span>
+                </div>
             </div>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <!-- Your index page content here -->
         </div>
-    </nav>
-</header>
-<main>
-    <div class="content">
-        <!-- Your index page content here -->
-    </div>
-</main>
-<script src="/JS/layout.js"></script>
-<script>
-    let urlParams = new URLSearchParams(window.location.search);
-    let page = urlParams.get('page');
-    if (page) {
-        loadContent(`/views/${page}.html`);
-    } else {
-        loadContent('/views/home.html');
-    }
-</script>
-<footer>
-    <p>&copy; 2025 Nova Spectra Games. All rights reserved.</p>
-</footer>
+        <div id="img-modal"
+            style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+            <span style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;"
+                onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Popup Image" style="max-width:90%; max-height:90%;">
+        </div>
+    </main>
+    <script src="/JS/layout.js"></script>
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let page = urlParams.get('page');
+        if (page) {
+            loadContent(`/views/${page}.html`);
+        } else {
+            loadContent('/views/home.html');
+        }
+    </script>
+    <footer>
+        <p>&copy; 2025 Nova Spectra Games. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

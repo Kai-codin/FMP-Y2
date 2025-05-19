@@ -197,7 +197,7 @@
             ]
         },
         {
-            "date": "2025-05-07",
+            "date": "2025-05-12",
             "type": "practical",
             "details": "Started work on the sewer grates, I also started work on the sewer system and leading the player throught it",
             "www": "Started to work on the sewer grates",
@@ -228,6 +228,20 @@
         {
             "date": "2025-05-12",
             "type": "testing",
+            "details": "Today I did my second testing session ",
+            "www": "I got some good feed back on my game and some areas to improve",
+            "ebi": "I had more of a game to show",
+            "image": [
+                {
+                    "src": "img/feadback.png",
+                    "alt": "image of the sewer grate",
+                    "description": "image of the sewer grate"
+                }
+            ]
+        },
+        {
+            "date": "2025-05-14",
+            "type": "practical",
             "details": "Today I did my second testing session ",
             "www": "I got some good feed back on my game and some areas to improve",
             "ebi": "I had more of a game to show",
