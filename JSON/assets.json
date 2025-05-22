@@ -1,0 +1,42 @@
+{
+    "images": [
+        {
+            "src": "img/angery ai.png",
+            "alt": "image_description"
+        },
+        {
+            "src": "img/blocked out fog.png",
+            "alt": "image_description"
+        },
+        {
+            "src": "img/sewer inside.png",
+            "alt": "image_description"
+        },
+        {
+            "src": "img/more ai.png",
+            "alt": "image_description"
+        }
+    ],
+    "audio": [
+        {
+            "src": "Assets/Hey 1.wav",
+            "alt": "Custom Hey SFX 1"
+        },
+        {
+            "src": "Assets/Hey 2.wav",
+            "alt": "Custom Hey SFX 2"
+        },
+        {
+            "src": "Assets/Hey 3.wav",
+            "alt": "Custom Hey SFX 3"
+        },
+        {
+            "src": "Assets/Hey 4.wav",
+            "alt": "Custom Hey SFX 4"
+        },
+        {
+            "src": "Assets/Hey 6.wav",
+            "alt": "Custom Hey SFX 5"
+        }
+    ]
+}
