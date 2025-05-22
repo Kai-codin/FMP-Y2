@@ -120,7 +120,6 @@ function loadLogs() {
                     <button onclick="filterLogs('research'); setActiveButton(this)">Research</button>
                     <button onclick="filterLogs('planning'); setActiveButton(this)">Planning</button>
                     <button onclick="filterLogs('practical'); setActiveButton(this)">Practical</button>
-                    <button onclick="filterLogs('game'); setActiveButton(this)">Game</button>
                     <button onclick="filterLogs('testing'); setActiveButton(this)">Testing</button>
                     <button onclick="filterLogs('evaluation'); setActiveButton(this)">Evaluation</button>
                 </div>
