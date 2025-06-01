@@ -2,19 +2,19 @@
     "images": [
         {
             "src": "img/angery ai.png",
-            "alt": "image_description"
+            "alt": "AI locked onto to player"
         },
         {
             "src": "img/blocked out fog.png",
-            "alt": "image_description"
+            "alt": "Simple level blog out"
         },
         {
             "src": "img/sewer inside.png",
-            "alt": "image_description"
+            "alt": "Sewer inside image"
         },
         {
             "src": "img/more ai.png",
-            "alt": "image_description"
+            "alt": "Lost of AI"
         }
     ]
 }

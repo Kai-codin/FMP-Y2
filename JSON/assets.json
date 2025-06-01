@@ -1,20 +1,24 @@
 {
     "images": [
         {
-            "src": "img/angery ai.png",
-            "alt": "image_description"
+            "src": "img/traffic light.png",
+            "alt": "Traffic light image"
         },
         {
-            "src": "img/blocked out fog.png",
-            "alt": "image_description"
+            "src": "img/sewuer.png",
+            "alt": "Sewer system image"
         },
         {
-            "src": "img/sewer inside.png",
-            "alt": "image_description"
+            "src": "img/sewer grate block out.png",
+            "alt": "Sewer grate block out image"
         },
         {
-            "src": "img/more ai.png",
-            "alt": "image_description"
+            "src": "img/lazer.png",
+            "alt": "Lazer image"
+        },
+        {
+            "src": "img/Exit sign.png",
+            "alt": "Exit sign image"
         }
     ],
     "audio": [
