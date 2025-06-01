@@ -54,6 +54,7 @@ function setActiveLink(path) {
         document.getElementById('planning-link')?.classList.add('active-link');
     } else if (path.includes('game')) {
         document.getElementById('game-link')?.classList.add('active-link');
+        loadAssets();
     } else if (path.includes('testing')) {
         document.getElementById('testing-link')?.classList.add('active-link');
     } else if (path.includes('evaluation')) {
@@ -78,24 +79,76 @@ function loadContent(path) {
         });
 }
 
+function loadAssets() {
+    console.log('DOMContentLoaded');
+
+    function fetchAndRenderAssets(jsonPath, containerId) {
+        fetch(jsonPath)
+            .then(response => response.json())
+            .then(data => {
+                console.log(`Loaded: ${jsonPath}`);
+                const grid = document.getElementById(containerId);
+                data.images.forEach((img, index) => {
+                    const innerDiv = document.createElement('div');
+                    const image = document.createElement('img');
+                    innerDiv.classList.add('image-container');
+                    image.src = img.src;
+                    image.alt = img.alt || `Image ${index + 1}`;
+                    image.style.cursor = 'pointer';
+                    const small = document.createElement('small');
+                    small.textContent = img.alt;
+                    image.onclick = () => openModal(img.src);
+                    innerDiv.appendChild(image);
+                    innerDiv.appendChild(small);
+                    grid.appendChild(innerDiv);
+                });
+                data.audio.forEach((audio, index) => {
+                    const innerDiv = document.createElement('div');
+                    const audioPlayer = document.createElement('audio');
+                    innerDiv.classList.add('image-container');
+                    audioPlayer.controls = true;
+                    const source = document.createElement('source');
+                    source.src = audio.src;
+                    source.type = 'audio/wav';
+                    audioPlayer.appendChild(source);
+                    const small = document.createElement('small');
+                    small.textContent = audio.alt;
+                    audioPlayer.onclick = () => openModal(audio.src);
+                    innerDiv.appendChild(audioPlayer);
+                    innerDiv.appendChild(small);
+                    grid.appendChild(innerDiv);
+                });
+            })
+            .catch(err => console.error(`Error loading assets from ${jsonPath}:`, err));
+    }
+
+    fetchAndRenderAssets('/JSON/images-screenshots.json', 'image-grid-screenshots');
+    fetchAndRenderAssets('/JSON/assets.json', 'image-grid-assets');
+}
+
+
 function loadImages() {
     console.log('DOMContentLoaded');
-    fetch('/JSON/images.json')
-        .then(response => response.json())
-        .then(data => {
-            console.log('test');
-            const grid = document.getElementById('image-grid');
-            data.images.forEach((img, index) => {
-                const image = document.createElement('img');
-                image.src = img.src;
-                image.alt = img.alt || `Game Screenshot ${index + 1}`;
-                image.style.cursor = 'pointer';
-                image.onclick = () => openModal(img.src);
-                grid.appendChild(image);
-            });
-        })
-        .catch(err => console.error('Error loading images:', err));
-};
+        function fetchAndRenderImages(jsonPath, containerId) {
+        fetch(jsonPath)
+            .then(response => response.json())
+            .then(data => {
+                console.log(`Loaded: ${jsonPath}`);
+                const grid = document.getElementById(containerId);
+                data.images.forEach((img, index) => {
+                    const image = document.createElement('img');
+                    image.src = img.src;
+                    image.alt = img.alt || `Image ${index + 1}`;
+                    image.style.cursor = 'pointer';
+                    image.onclick = () => openModal(img.src);
+                    grid.appendChild(image);
+                });
+            })
+            .catch(err => console.error(`Error loading images from ${jsonPath}:`, err));
+    }
+
+    fetchAndRenderImages('/JSON/images.json', 'image-grid');
+}
 
 function setActiveButton(button) {
     const buttons = document.querySelectorAll('.filter-buttons button');

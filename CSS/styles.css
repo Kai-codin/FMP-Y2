@@ -154,6 +154,32 @@ footer {
     width: 100%;
 }
 
+.image-grid img,
+.image-grid audio {
+    width: calc(50% - .25em - 7.5px);
+    margin: 2px 5px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.asset-grid img,
+.asset-grid audio {
+    width: calc(100% - .25em - 7.5px);
+    margin: 2px 5px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.image-container {
+    display: inline-grid;
+    width: 50%;
+    text-align: center;
+}
+
+.asset-grid audio {
+    height: 50px;
+}
+
 .image-grid img {
     width: calc(50% - .25em - 7.5px);
     margin: 2px 5px;
@@ -162,6 +188,10 @@ footer {
 }
 
 .image-grid img:hover {
+    scale: 1.025;
+}
+
+.asset-grid img:hover {
     scale: 1.025;
 }
 

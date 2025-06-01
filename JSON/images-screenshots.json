@@ -1,0 +1,20 @@
+{
+    "images": [
+        {
+            "src": "img/angery ai.png",
+            "alt": "image_description"
+        },
+        {
+            "src": "img/blocked out fog.png",
+            "alt": "image_description"
+        },
+        {
+            "src": "img/sewer inside.png",
+            "alt": "image_description"
+        },
+        {
+            "src": "img/more ai.png",
+            "alt": "image_description"
+        }
+    ]
+}
